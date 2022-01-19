@@ -36,7 +36,7 @@ n = int(input()) # 사이즈 입력
 tree = {}
 
 for i in range(n):
-    data, left_node, right_node = input().split()
+    data, left_node, right_node = input().split() # 부모노드 자식노드(왼쪽) 자식노드(오른쪽)
     if left_node == "None":
         left_node = None
     if right_node == "None":
@@ -44,8 +44,8 @@ for i in range(n):
     tree[data] = Node(data, left_node, right_node)
 
 pre_order(tree['A'])
-print()
+print() # 전위 순회 결과 출력
 in_order(tree['A'])
-print()
+print() # 중위 순회 결과 출력
 post_order(tree['A'])
-print()
+print() # 후위 순회 결과 출력
